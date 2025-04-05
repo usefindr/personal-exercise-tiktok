@@ -1,1 +1,2 @@
-Health Problem Solution App
+npm install
+node index.js
