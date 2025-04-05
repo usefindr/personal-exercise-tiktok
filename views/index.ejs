@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Problem Solver</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Health Problem Solver</h1>
+            <p>Enter your health concern and get personalized solutions with exercise videos</p>
+        </header>
+
+        <main>
+            <section id="problem-input" class="active-section">
+                <h2>Step 1: Describe Your Health Problem</h2>
+                <form id="problem-form">
+                    <div class="form-group">
+                        <label for="health-problem">What health issue are you experiencing?</label>
+                        <input type="text" id="health-problem" placeholder="e.g., curved back, knee pain, etc." required>
+                    </div>
+                    <button type="submit" class="btn">Continue</button>
+                </form>
+            </section>
+
+            <section id="questions-section" class="hidden-section">
+                <h2>Step 2: Answer Some Questions</h2>
+                <div id="questions-container">
+                    <!-- Questions will be dynamically inserted here -->
+                </div>
+                <form id="questions-form">
+                    <div id="dynamic-questions"></div>
+                    <div class="button-group">
+                        <button type="button" class="btn back-btn" data-target="problem-input">Back</button>
+                        <button type="submit" class="btn">Get My Plan</button>
+                    </div>
+                </form>
+            </section>
+
+            <section id="plan-section" class="hidden-section">
+                <h2>Step 3: Your Personalized Plan</h2>
+                <div id="plan-container">
+                    <!-- Plan will be dynamically inserted here -->
+                </div>
+                <div class="button-group">
+                    <button type="button" class="btn back-btn" data-target="questions-section">Back</button>
+                    <button type="button" id="find-videos-btn" class="btn">Find Exercise Videos</button>
+                </div>
+            </section>
+
+            <section id="videos-section" class="hidden-section">
+                <h2>Step 4: Recommended Exercise Videos</h2>
+                <div id="videos-container">
+                    <!-- Videos will be dynamically inserted here -->
+                </div>
+                <div class="button-group">
+                    <button type="button" class="btn back-btn" data-target="plan-section">Back to Plan</button>
+                    <button type="button" id="start-over-btn" class="btn">Start Over</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Disclaimer: This app provides general guidance only. Consult a healthcare professional for medical advice.</p>
+        </footer>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
